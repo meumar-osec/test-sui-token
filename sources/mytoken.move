@@ -13,13 +13,13 @@ module Mytoken::Mytoken {
         transfer::public_transfer(treasury, ctx.sender());
     }
 
-    // public fun mint(
-	// 	treasury_cap: &mut TreasuryCap<MYTOKEN>,
-	// 	amount: u64,
-	// 	recipient: address,
-	// 	ctx: &mut TxContext,
-    // ) {
-    //     let coin = coin::mint(treasury_cap, amount, ctx);
-    //     transfer::public_transfer(coin, recipient)
-    // }
+    public fun mint(
+		treasury_cap: &mut TreasuryCap<MYTOKEN>,
+		amount: u64,
+		recipient: address,
+		ctx: &mut TxContext,
+    ) {
+        let coin = coin::mint(treasury_cap, amount, ctx);
+        transfer::public_transfer(coin, recipient)
+    }
 }
