@@ -1,5 +1,5 @@
 [package]
-name = "Mytoken"
+name = "mytoken"
 edition = "2024.beta"
 version = "0.0.1"
 
